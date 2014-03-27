@@ -6,8 +6,19 @@ gem 'rails', '4.0.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+gem 'thin'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
+
+#bootstrap
+gem 'bootstrap-sass', '~> 3.1.1'
+
+	group :development do
+		gem "hirb"
+		gem "interactive_editor"
+		gem "awesome_print"
+	end
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
