@@ -26,6 +26,6 @@ class ProjectsController < ApplicationController
 
 	private
 
-	def 
+	
 
 end
