@@ -1,0 +1,28 @@
+
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Project title: <%= @project.title %></h1>
+    </div>
+    <div class="col-md-6">
+    <br>
+      <%= button_to "Edit Project Title", edit_project_path(@project), method: :get, class: "btn btn-default" %>
+    <br>
+      <%= button_to "Add A Discussion", new_project_discussion_path(@project), method: :get, class: "btn btn-default" %>
+    <br>
+      <%= button_to "Delete Project!", project_path(@project), method: :delete,
+      data: {confirm: "Are you sure you want to delete this project?"}, class: "btn btn-danger" %>
+    <br>
+
+    </div>
+  </div>
+
+<div class="space"></div>
+<hr>
+<div class="row">
+  <div class="col-md-6">
+  <%= render "/projects/tasks" %>
+  </div>
+  <div class="col-md-6">
+  <%= render "/projects/discussions" %>
+  </div>
+</div>

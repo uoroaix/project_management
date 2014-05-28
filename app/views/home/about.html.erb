@@ -2,6 +2,20 @@
 <h1> This is the about page header </h1>
 
 <p>This is the about page!</p>
+<%= link_to "Click Me", "javascript:void(0);", class: "button1 btn btn-primary" %>
+<%= link_to "Enlarge Me", "javascript:void(0);", class: "button2 btn btn-primary" %>
+<br>
+<br>
+<%= text_field_tag "box", nil, class: "box", placeholder: "Enter something here..." %>
+<br>
+<span class="boxResult"></span>
+<br>
+<%= text_field_tag "color-box", nil, class: "color-box", placeholder: "Enter some color here..." %>
+<br>
+<span class="boxColor"></span>
+<h3>Picture:</h3>
+<p><img src="http://www.designbolts.com/wp-content/uploads/2013/06/despicable-me-characters-wallpaper.jpg" width="200" height="250"></img></p>
+<p id="test"></p>
 <h3>Name:</h3>
 <p>Alex Kuang</p>
 <br>
@@ -11,5 +25,9 @@
 <h3>Phone:</h3>
 <p>1234567894</p>
 <br>
-<h3>Picture:</h3>
-<p><img src="http://www.designbolts.com/wp-content/uploads/2013/06/despicable-me-characters-wallpaper.jpg" width="200" height="250"></img></p>
+<h3>List:</h3>
+<ul>
+  <li>vancouver</li>
+  <li>richmond</li>
+  <li>burnaby</li>
+</ul>

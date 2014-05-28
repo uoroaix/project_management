@@ -1,0 +1,11 @@
+<h1> Your Projects ! </h1>
+
+<% @projects.each do |project| %>
+<div class="jumbotron">
+	<h2><%= link_to project.title, project %></h2>
+	<p>Created On: <%= formatted_date(project.created_at) %></p>
+  <p>Created By: <%= project.user.full_name %></p>
+</div>
+
+
+<% end %>

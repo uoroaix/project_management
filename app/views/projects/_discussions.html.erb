@@ -1,0 +1,22 @@
+<h1>Discussions</h1>
+<hr>
+<div class="space"></div>
+<% @discussions.each do |discussion| %>
+<div class="well">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h2><%= link_to discussion.title, project_discussion_path(@project, discussion) %></h2>
+        <p><%= discussion.description %></p>
+      </div>
+      <div class="col-md-3">
+      <%= button_to "Delete", project_discussion_path(@project, discussion), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete?"} %>
+      <br>
+      <%= button_to "Edit", edit_project_discussion_path(@project, discussion), method: :get, class: "btn btn-default" %>
+      <br>
+      <p>Created On: <%= formatted_date(discussion.created_at) %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

@@ -1,3 +1,15 @@
 .space {
 	margin:50px;
 }
+
+.field_with_errors {
+	background-color: red;
+}
+
+.well {
+  background-color:#FFBD73;
+}
+
+.jumbotron {
+  background-color:#FFBD73;
+}

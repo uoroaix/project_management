@@ -1,0 +1,13 @@
+<div class="space"></div>
+<h1>Add A Comment</h1>
+<%= form_for @comment, url: discussion_comments_path(@discussion) do |f| %>
+
+  <%= f.label :body, "Enter your comment" %>
+  <%= f.text_area :body %>
+  <br>
+  <%= f.submit "Submit" %>
+
+
+<% end %>
+
+

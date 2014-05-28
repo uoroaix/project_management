@@ -1,11 +1,26 @@
 ProjectManagement::Application.routes.draw do
 
+  devise_for :users
   root "home#index"
   get "/" => "home#index"
   get "/about" => "home#about"
   get "/questions" => "questions#new"
 
-  resources :projects
+
+  resources :projects do
+    resources :tasks do
+      member do
+        get :status
+      end
+    end
+    resources :discussions
+  end
+
+  resources :discussions, only: [] do
+    resources :comments
+  end
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
